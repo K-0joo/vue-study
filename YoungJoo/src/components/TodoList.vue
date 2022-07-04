@@ -33,6 +33,7 @@
 </template>
 
 <script>
+// import { watchEffect } from 'vue';
 export default {
     //데이터 형식 
     //props: ['todos']
@@ -48,6 +49,9 @@ export default {
     empits: ['toggle-todo', 'delete-todo'],
 
     setup(props, { emit }) {
+      // watchEffect(() => {
+      //   console.log(props.todos.length)
+      // });
         const toggleTodo = (index) => {
             emit('toggle-todo', index);  // 'toggle-todo'는 이벤트 이름
         };
